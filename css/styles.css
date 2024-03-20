@@ -272,15 +272,53 @@ button{
 
 .how-it-works-title {
     font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .how-it-works-text {
-
+    margin-bottom: 40px;
 }
 
-.how-it-works-list {}
+.how-it-works-list {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    counter-reset: list-counter;
+}
 
-.how-it-works-item {}
+.how-it-works-item::before {
+    counter-increment: list-counter;
+    /* Increment the counter */
+    content: counter(list-counter);
+    /* Display the counter value */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border: none;
+    box-shadow: 0 0 0 5px rgba(122, 49, 69, 0.3);
+    border-radius: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: #FBFBFB;
+    background-color: #7A3145;
+    flex-shrink: 0;
+}
+
+.how-it-works-item {
+    display: flex;
+    border-radius: 15px;
+    padding: 12px 27px 12px 24px;
+    width: 335px;
+    height: 76px;
+    align-items: center;
+    gap:24px;
+    background-color: #FBFBFB;
+}
 
 .how-it-works-item-title {
     font-weight: 600;
@@ -329,18 +367,27 @@ button{
 
 /* ====VEGETABLES==== */
 .vegetables {
+    padding: 80px 20px;
     background-color: #7A3145;
 }
 
-.vegetables-title {}
+.vegetables-title {
+    margin-bottom: 20px;
+}
 
 .vegetables-title-span {
     color: rgba(251, 251, 251, 0.3);
 }
 
-.vegetables-text {}
+.vegetables-text {
+    margin-bottom: 40px;
+}
 
-.vegetables-list {}
+.vegetables-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 .vegetables-item {
     border-radius: 40px;
@@ -352,6 +399,7 @@ button{
 
 .vegetables-item-title {
     font-size: 28px;
+    margin-bottom: 12px;
     color: #7A3145;
 }
 
@@ -361,6 +409,7 @@ button{
     line-height: 1.29;
     letter-spacing: -0.01em;
     text-transform: uppercase;
+    margin-bottom: 14px;
     color: #141414;
 }
 
@@ -368,9 +417,12 @@ button{
 /* ================= */
 
 /* ======Reviews==== */
-.reviews {}
+.reviews {
+    padding: 80px 20px;
+}
 
 .reviews-title {
+    margin-bottom: 20px;
     color: #141414;
 }
 
@@ -379,20 +431,33 @@ button{
 }
 
 .reviews-text {
+    margin-bottom: 40px;
     color: #141414;
 }
 
 .reviews-list {}
 
-.reviews-item {}
+.reviews-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(122, 49, 69, 0.3);
+    border-radius: 24px;
+    padding: 20px 16px;
+    width: 335px;
+    height: 238px;
+}
 
-.reviews-item-img {}
+.reviews-item-img {
+    margin-bottom: 24px;
+}
 
 .reviews-item-title {
     font-weight: 600;
     line-height: 1.25;
     letter-spacing: -0.02em;
     text-align: center;
+    margin-bottom: 8px;
     color: #040306;
 }
 
@@ -407,16 +472,21 @@ button{
 
 /* ====ORDERS======= */
 .ur-order {
+    padding: 80px 20px;
     background-color: #7A3145;
 }
 
-.ur-order-title {}
+.ur-order-title {
+    margin-bottom: 29px;
+}
 
 .ur-order-title-span {
     color: rgba(251, 251, 251, 0.3);
 }
 
-.ur-order-text {}
+.ur-order-text {
+    margin-bottom: 40px;
+}
 /* ================= */
 
 /* =====FOOTER====== */
